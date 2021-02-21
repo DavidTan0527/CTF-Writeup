@@ -4,7 +4,7 @@ title : "Dice Is You [RE]"
 categories: DiceCTF2021
 ---
 
-A wasm reversing challenge.
+A wasm reversing challenge using closure compiler to simplify code, and z3 to solve for final solution.
 
 # Challenge Description
 ```
