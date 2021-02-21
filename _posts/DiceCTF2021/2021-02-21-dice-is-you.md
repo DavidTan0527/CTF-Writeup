@@ -51,9 +51,9 @@ function level4() {
 function level_flag_fin() {
 function flag_rules(a:int, b:int) {
 ...
-function check_code(a, b, c, d) {
+function check_code(a:int, b:int, c:int, d:int):int {
 function get_code_value(a:int):int {
-function code(a, b, c, d, e) {
+function code(a:int, b:int, c:int, d:int, e:int):int {
 function reset(a:int) {
 function check_rule(a:int, b:int, c:int, d:int, e:int, f:int, g:int, h:int):int {
 function check_win_condition(a:int, b:int, c:int):int {
