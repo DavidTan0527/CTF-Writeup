@@ -44,6 +44,17 @@ paginate_path: /page:num/
 
 breadcrumbs: true
 
+category_archive:
+  type: jekyll-archives
+  path: /ctfs/
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: archive-taxonomy
+  permalinks:
+    category: /:categories/
+
 # Default Front Matter
 defaults:
   # _posts
@@ -63,7 +74,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: single
+      layout: category
       author_profile: true
 
 # Site Author
