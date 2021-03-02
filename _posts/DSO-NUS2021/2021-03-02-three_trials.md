@@ -48,7 +48,7 @@ else {
 return uVar1;
 ```
 
-We want this to return a non-zero value, which is 1. It should be quite obvious that it wants the sum of cube of digits of the argument to be equal to the argument itself.
+We want this to return 1. It should be quite obvious that it wants the sum of cube of digits of the argument to be equal to the argument itself.
 
 An example:
 
@@ -94,7 +94,7 @@ if ((local_20 - (local_20 >> 0x1f) & 1U) + (local_20 >> 0x1f) != 1) {
 return 0;
 ```
 
-`local_20` is counting the number of digits in the square of `param_1` (notice the `pow(param_1, 2)`), so `local_20 >> 0x1f` will always be 0 since our input is only an `int`. So the if statement is basically
+`local_20` is the number of digits in the `param_1` squared (notice the `pow(param_1, 2)`), so `local_20 >> 0x1f` will always be 0 since our input is only an `int`. So the if statement is basically
 
 ```c
 if (local_20 != 1) { ...
@@ -105,7 +105,7 @@ Then inside the while loop, it is basically checking whether a given input n has
 $n^2 \% 10^k + n^2 / 10^k == n$
 {: .notice}
 
-for some valid k. Notice that `n*n` should be greater than `1e9` as seen from the return statement inside the while loop. So this is another easy brute force then:
+for some valid k. Notice that `n*n` should be greater than `1e9` as seen from the return statement inside the while loop. So this is another easy brute force:
 
 ```python
 for i in range(4, 2**31):
@@ -142,7 +142,7 @@ if (((local_10 == param_1) && (dVar1 = (double)FUN_0010173c(10,5), dVar1 < (doub
 return 0;
 ```
 
-One sentence to summarize this final test: A number in between `1e5` and `1e8`, where the sum of its proper divisors is equal to itself.
+One sentence to summarize this: A number between `1e5` and `1e8`, where the sum of its proper divisors is equal to itself.
 
 A normal brute force will not work as the complexity will be `O(n√n)`, and for `n = 1e8`, this will take too long to complete. Luckily I found [this](https://codereview.stackexchange.com/questions/167288/sum-of-proper-divisors-of-every-number-up-to-n) that proposes a solution of complexity `O(n log log n)`.
 
@@ -220,5 +220,5 @@ This code takes around 5 minutes or so to run.
 
 Then, we put `407-38962-33550336` into SHA256 and we get our flag!
 
-Flag: DSO-NUS{5137e2ead70710512aa82dfca8727c4eb6803637143a9c2f0c7596ab00352a69}
+Flag: `DSO-NUS{5137e2ead70710512aa82dfca8727c4eb6803637143a9c2f0c7596ab00352a69}`
 
