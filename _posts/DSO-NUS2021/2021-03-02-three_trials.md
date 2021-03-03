@@ -94,13 +94,13 @@ if ((local_20 - (local_20 >> 0x1f) & 1U) + (local_20 >> 0x1f) != 1) {
 return 0;
 ```
 
-`local_20` is the number of digits in the `param_1` squared (notice the `pow(param_1, 2)`), so `local_20 >> 0x1f` will always be 0 since our input is only an `int`. So the if statement is basically
+`local_20` is the number of digits in `param_1` squared (notice the `pow(param_1, 2)`), so `local_20 >> 0x1f` will always be 0 since our input is only an `int`. So the if statement is basically
 
 ```c
 if (local_20 != 1) { ...
 ```
 
-Then inside the while loop, it is basically checking whether a given input n has
+So our input is at least 4, since 3*3 == 9 which is a single digit number. Then inside the while loop, it is basically checking whether a given input n has
 
 $n^2 \% 10^k + n^2 / 10^k == n$
 {: .notice}
