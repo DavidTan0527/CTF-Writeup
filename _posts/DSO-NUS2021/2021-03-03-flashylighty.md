@@ -37,7 +37,7 @@ Supposedly, we need to reach the part of "Check logcat!". There are two interest
 
 ## Analyzing the native methods
 
-We go to `/bin/x86` (my choice of architecture), and import that `.so` into ghidra. Here are the decompilations of the two native methods:
+We go to `/lib/x86` (my choice of architecture), and import that `.so` into ghidra. Here are the decompilations of the two native methods:
 
 {% include gallery %}
 
