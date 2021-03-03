@@ -39,7 +39,7 @@ plugins:
   - jekyll-archives
 
 permalink: /:categories/:title
-pagination: 5
+paginate: 5
 paginate_path: /page:num/
 
 breadcrumbs: true
