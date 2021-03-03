@@ -1,5 +1,4 @@
 ---
-layout: categories
 title : "Dice Is You [RE]"
 categories: DiceCTF2021
 ---
