@@ -273,7 +273,7 @@ DEPENDENCIES
   github-pages
   jekyll-archives
   jekyll-feed (~> 0.12)
-  jekyll-redirect-from
+  jekyll-paginate
   jekyll-remote-theme
   minimal-mistakes-jekyll
   tzinfo (~> 1.2)
