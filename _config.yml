@@ -39,6 +39,7 @@ plugins:
   - jekyll-archives
 
 permalink: /:categories/:title
+
 paginate: 5
 paginate_path: /page:num/
 
@@ -92,14 +93,17 @@ author:
       url: "https://github.com/DavidTan0527"
 
 # Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/davidtan0527"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/DavidTan0527"
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/davidtan0527"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/DavidTan0527"
+
+atom_feed:
+  hide: true
 
 # Includes
 include: ["_pages"]
