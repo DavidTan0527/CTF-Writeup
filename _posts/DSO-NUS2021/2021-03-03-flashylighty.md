@@ -81,7 +81,7 @@ if (*(int *)(in_GS_OFFSET + 0x14) == local_14) {
 
 The do-while loop is incrementing our input number by the duration of one iteration, for a total of 100 iterations, then the resulting value squared must be equal to `0x7a69`. If you do the math out, `0x7a69 = 31337` which is not a perfect square, so we need to exploit the fact that `imul` instruction in assembly only takes the lowest 32 bits of the result into `eax`, so we can write a brute force to find a number such that its square is of the form `0x...00007a69`.
 
-But how do we deal with the time? I had no idea at that moment in time so I played a lot with `adb` and tried to see if `logcat` can give me precise timings of each iteration, but eventually I realised that each iteration would never take more than 1ms, and since the division will take the floor, each iteration either adds 1 or 0.
+But how do we deal with the time? I had no idea at that moment in time so I played a lot with `adb` and tried to see if `logcat` can give me precise timings of each iteration, but eventually I realised that each iteration would never take more than 2ms, and since the division will take the floor, each iteration either adds 1 or 0.
 
 So I just need to try for increments of 0 to 100, and take those respective inputs into `gimmie`.
 
