@@ -18,7 +18,7 @@ path1:
    title: "path.png"
 ---
 
-Reverse engineer a WebGL game by reversing it's fragment shader program. First RE and Web challenge from Plaid CTF 2021.
+Reverse engineer a WebGL game by reversing its fragment shader program. First RE and Web challenge from Plaid CTF 2021.
 
 # Challenge Description
 "Just when I thought I was out, they pulled me back in again." From acclaimed writer Jimmy Glow comes the third entry in the Watness trilogy. Our hero is once again pulled into a world of puzzles and problems, with only their wit, persistence, and sheer force of will. Critics rave, "Why have you done this?"
