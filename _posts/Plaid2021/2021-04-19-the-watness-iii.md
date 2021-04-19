@@ -203,7 +203,7 @@ for x in range(img.width):
 result.save('path.png')
 ```
 
-{% include gallery id="path1" %}
+{% include gallery id="path1" caption="The image and its processed image" %}
 
 The black dots represented the "mid-point" that we can pass through, which means our path should look something like:
 
