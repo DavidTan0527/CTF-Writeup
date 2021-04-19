@@ -90,7 +90,7 @@ Then, throw it to a beautifier to get better indentations and line breaks. Some 
   2. The output is passed via `gl_FragColor`, which supposedly should correspond to the color of the current pixel.
   3. The shader starts in `main()`, unsuprisingly...
 
-{% include image.html url="/assets/images/the_watness_iii/code2.png" description="" %}
+{% include image.html url="/assets/images/the_watness_iii/code2.png" description="The main function in the fragment shader" %}
 
 After inspecting `Cl`, `Ce`, `CN`, I found that `CP` is just the level that we are on. We can verify this by changing `loopback[121][0]` to 0, 1, 2 respectively: At the breakpoint mentioned earlier, do `t[121][0] = ...` to update.
 
