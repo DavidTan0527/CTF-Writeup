@@ -29,7 +29,7 @@ Reverse engineer a WebGL game by reversing its fragment shader program. First RE
 
 *Disclaimer: This writeup will be quite long as I want to go a bit into the details of WebGL or even some working principles of OpenGL. Hopefully it will help you understand how I came up with my solution.*
 
-*Also, I will be using "WebGL" and "OpenGL" quite interchangingly, since WebGL is just an API to apply OpenGL in the browser.*
+*Also, I will be using "WebGL" and "OpenGL" quite interchangeably, since WebGL is just an API to apply OpenGL in the browser.*
 
 We are presented with a first-person game and we can draw line paths on a grid, that's it. So the first thing to do is to open the developer's console and look at the network and source tabs.
 
