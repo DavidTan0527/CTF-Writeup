@@ -76,29 +76,8 @@ I realized that these corresponded to the line I drew (refer to the image above)
 This breakpoint is important, since it allows us to directly change `loopback` and test things out, **remember this for references later on in the writeup**. This updated `loopback` will be passed through the shaders to update the pixel values.
 
 ## Reading the shader program
-```c
-#ifdef GL_ES
-precision highp float;
-precision highp int;
-#endif
-uniform float time;
-uniform float dt;
-uniform vec2 resolution;
-uniform ivec4 loopback[250];
-varying vec3 surface_loc;
-varying vec3 color;
-varying vec3 focus;
-varying vec3 viewport_center;
-#define A(B, C)(B < C ? B : C)
-#define D(B, E, F)(min(max(B, E), F))
-#define G(H, I) J(loopback[int(H)].xyz) * I
-#define K(H) loopback[int(H)].x
-#define L(H) loopback[int(H)].xy
-#define M(H) loopback[int(H)].xyz
-#define N(H)(loopback[int(H)].x == 0 ? false : true)
-#define O(H, I) vec2(G(H, I), G(int(H) + 1, I))
-...
-```
+
+{% include image.html url="/assets/images/the_watness_iii/code1.png" description="" %}
 
 To make it easier to read, we can preprocess this code and replace the `#define` directives with the intended expression by running the C preprocessor:
 
@@ -111,41 +90,13 @@ Then, throw it to a beautifier to get better indentations and line breaks. Some 
   2. The output is passed via `gl_FragColor`, which supposedly should correspond to the color of the current pixel.
   3. The shader starts in `main()`, unsuprisingly...
 
-```c
-void main() {
-  vec4 Cq = c;
-  int CP = loopback[121].x;
-  int AU;
-  if (CP == 0) AU = 8;
-  if (CP == 1) AU = 8;
-  if (CP == 2) AU = 12;
-  vec2 Bo = Br(AU);
-  vec2 Cr = By();
-  vec2 CF = CE();
-  bool AA = (loopback[int(120.)].x == 0 ? false : true);
-  z Cs;
-  if (CP == 0) Cs = Cl(Bo);
-  if (CP == 1) Cs = Ce(Bo);
-  if (CP == 2) Cs = CN(Bo);
-```
+{% include image.html url="/assets/images/the_watness_iii/code2.png" description="" %}
 
 After inspecting `Cl`, `Ce`, `CN`, I found that `CP` is just the level that we are on. We can verify this by changing `loopback[121][0]` to 0, 1, 2 respectively: At the breakpoint mentioned earlier, do `t[121][0] = ...` to update.
 
 Remember our objective? We need `loopback[150][0]` to not be 0. Looking in `main` we see this near the end:
 
-```c
-void main() {
-  ...
-  if (gl_FragCoord.y <= 1. && gl_FragCoord.x > 150. && gl_FragCoord.x <= 150. + 1.) {
-    gl_FragColor = vec4((CP == 3) ? 1. : 0., 0, 0, 0);
-    return;
-  };
-  if (gl_FragCoord.y <= 1.) {
-    gl_FragColor = vec4(0., 0., 0., 0.);
-    return;
-  }
-}
-```
+{% include image.html url="/assets/images/the_watness_iii/code3.png" description="" %}
 
 I found out that `gl_FragCoord.x > 150. && gl_FragCoord.x <= 150. + 1.` just makes sure that the current pixel is indexed 150.
 
@@ -154,11 +105,13 @@ I found out that `gl_FragCoord.x > 150. && gl_FragCoord.x <= 150. + 1.` just mak
 So we have our objective here: Make `CP == 3`, but it isn't as easy as changing the value at that breakpoint, since the final flag is dependent on pixels index 130 to 147.
 
 ```c
+void main() {
   ...
   if (Cs.AB && AD(viewport_center, Cv.v) < 2.) {
     CP = CP + 1;
   }
   ...
+}
 ```
 
 This block suggests that we advance a level every time `Cs.AB == true` (not sure what the other term does so I ignored it). At level 2, we will have `CP = 2 + 1 = 3` if we solve it!!!
@@ -305,25 +258,7 @@ bool Bi(int AU) {
 
 Here's `AP`, and `AK` which is called in `AP`:
 
-```c
-float AK(float AF, float AL, float AM) {
-  float AI = mod(AF, AM);
-  float AN = 1.;
-  for (int AO = 0; AO < 8; AO++) {
-    if (mod(AL, 2.) == 1.) {
-      AN = mod(AN * AI, AM);
-    }
-    AI = mod(AI * AI, AM);
-    AL = floor(AL / 2.);
-  }
-  return AN;
-}
-// AP(..., 2)
-int AP(float R, float AQ) {
-  float AR = AK(1021., R + 12., 4093.);
-  return int(floor(AR * AQ / 4093.));
-}
-```
+{% include image.html url="/assets/images/the_watness_iii/code4.png" description="We will call AP(..., 2)" %}
 
 Notice that `AK` is just binary exponentiation, essentially `AK(a,b,m) == pow(a,b,m)` in python. So we can write some code to find which points can be travelled to.
 
