@@ -86,8 +86,8 @@ cpp source.c clean_source.c
 ```
 
 Then, throw it to a beautifier to get better indentations and line breaks. Some important things to note when reading this code:
-  1. The input is given by `gl_FragCoord`, which is the coordinate of the pixel that this shader is updating, and supplmented by `loopback` and other fields.
-  2. The output is passed via `gl_FragColor`, which supposedly should correspond to the color of the current pixel.
+  1. The input is given by `gl_FragCoord`, which is the coordinate of the pixel that this shader is updating, and supplemented by `loopback` and other fields.
+  2. The output is passed via `gl_FragColor`, which should correspond to the color of the current pixel.
   3. The shader starts in `main()`, unsuprisingly...
 
 {% include image.html url="/assets/images/the_watness_iii/code2.png" description="The main function in the fragment shader" %}
@@ -114,7 +114,7 @@ void main() {
 }
 ```
 
-This block suggests that we advance a level every time `Cs.AB == true` (not sure what the other term does so I ignored it). At level 2, we will have `CP = 2 + 1 = 3` if we solve it!!!
+This block suggests that we advance a level every time `Cs.AB == true` (not sure what the other term, does so I ignored it). At level 2, we will have `CP = 2 + 1 = 3` if we solve it!!!
 
 ```c
 struct z {
@@ -125,6 +125,7 @@ struct z {
 void main() {
   ...
   // We need these to return {XX, true}
+  z Cs;
   if (CP == 0) Cs = Cl(Bo);
   if (CP == 1) Cs = Ce(Bo);
   if (CP == 2) Cs = CN(Bo);
@@ -177,6 +178,7 @@ I've added comments to indicate what each line represents. The thing to take car
 But what does `texture2D(introImage, ...)` do? According to the [description](https://thebookofshaders.com/glossary/?search=texture2D) of the function, it takes the pixel of `introImage` at the specified coordinates and returns it.
 
 But from the comments I've put, the x and y values are divided by 8, this is because OpenGL wants to normalize the coordinates such that the image dimension doesn't affect the coordinates that needs to be passed in (read about it [here][1]).
+
 [1]: https://www.khronos.org/opengl/wiki/Sampler_(GLSL)#Texture_coordinates
 
 And due to normalization, `Bm.a >= 1` means that the alpha value of that pixel is `>= 255`, which essentially means `== 255` since it cannot exceed 255.
