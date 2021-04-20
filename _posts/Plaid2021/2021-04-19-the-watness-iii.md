@@ -114,7 +114,7 @@ void main() {
 }
 ```
 
-This block suggests that we advance a level every time `Cs.AB == true` (not sure what the other term, does so I ignored it). At level 2, we will have `CP = 2 + 1 = 3` if we solve it!!!
+This block suggests that we advance a level every time `Cs.AB == true` (not sure what the other term does, so I ignored it). At level 2, we will have `CP = 2 + 1 = 3` if we solve it!!!
 
 ```c
 struct z {
@@ -205,7 +205,7 @@ result.save('path.png')
 
 {% include gallery id="path1" caption="The image and its processed image" %}
 
-The black dots represented the "mid-point" that we can pass through, which means our path should look something like:
+The black dots represent the "mid-point" that we can pass through, which means our path should look something like:
 
 {% include image.html url="/assets/images/the_watness_iii/stage1_path_solve.png" description="Final path" %}
 
