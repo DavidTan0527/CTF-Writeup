@@ -51,7 +51,7 @@ So it's just copying the string that we passed in into a local variable. The cod
 
 The value of `param_4` is fixed (hardcoded). Whereas the value of `param_3` depends on what value will make `specialK() == 10101`, recall that the numbers passed into the two method calls are the same.
 
-So the only thing left to do is to reverse `gimmie`:
+So the only thing left to do is to reverse `specialK`:
 
 ```c
 iVar3 = 100;
