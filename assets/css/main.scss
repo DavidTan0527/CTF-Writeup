@@ -10,10 +10,10 @@ $doc-font-size: 14;
 @import "minimal-mistakes"; // main partials
 
 html {
-  font-size: 12px; // change to whatever
+  font-size: 14px; // change to whatever
 
   @include breakpoint($medium) {
-    font-size: 14px; // change to whatever
+    font-size: 16px; // change to whatever
   }
 
   @include breakpoint($large) {
