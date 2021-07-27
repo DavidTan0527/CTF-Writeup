@@ -24,7 +24,7 @@ email: david_weiucheng@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Challenges will mostly be RE and pwning.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "davidtan0527.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://davidtan0527.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: davidtan0527
 github_username:  DavidTan0527
 timezone: Asia/Singapore
