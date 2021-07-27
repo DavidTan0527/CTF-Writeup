@@ -27,6 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: davidtan0527
 github_username:  DavidTan0527
+timezone: Asia/Singapore
 
 # Build settings
 # theme: minimal-mistakes-jekyll
@@ -37,6 +38,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 permalink: /:categories/:title
 
