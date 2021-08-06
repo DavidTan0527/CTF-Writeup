@@ -32,6 +32,8 @@ This level is basically unsolvable by just playing the game, so let's finally do
 
 Opening the network tab in the developer's tools, we can copy the url (https://dice-is-you.dicec.tf/app.wasm) to the wasm binary and download that.
 
+*You can get the wasm file [here]({{ sites.url }}/files/dice/app.wasm)*
+
 Then, we can use a [wasm decompiler](https://github.com/WebAssembly/wabt) to decompile the binary to, what is known as, dcmp (which is syntactically very similar to JavaScript).
 
 ```bash
