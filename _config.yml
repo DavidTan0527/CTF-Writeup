@@ -41,12 +41,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-permalink: /:categories/:title
 
 paginate: 5
 paginate_path: /page:num/
 
 breadcrumbs: true
+
+collections:
+  ctfs:
+    output: true
+    permalink: /:collection/:categories/:title
+  blogs:
+    output: true
+    permalink: /:collection/:path
 
 category_archive:
   type: jekyll-archives
@@ -80,13 +87,25 @@ defaults:
     values:
       layout: category
       author_profile: true
+  # _blogs
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: single
+      classes: wide
+      author_profile: true
+      read_time: true
+      words_per_minute: 120
+      show_date: true
+      related: false
 
 # Site Author
 author:
-  name             : "David Tan"
-  avatar           : "/assets/images/bio.PNG"
-  bio              : "Newbie here =.="
-  email            : "david_weiucheng@hotmail.com"
+  name  : "David Tan"
+  avatar: "/assets/images/bio.PNG"
+  bio   : "Newbie here =.="
+  email : "david_weiucheng@hotmail.com"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -95,21 +114,11 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/DavidTan0527"
 
-# Site Footer
-# footer:
-#   links:
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/davidtan0527"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/DavidTan0527"
-
 atom_feed:
   hide: true
 
 # Includes
-include: ["_pages"]
+include: ["_pages", "_blogs"]
 
 analytics:
   provider: "google-gtag"

@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 *.swp
 vendor
+tags
 .DS_Store
