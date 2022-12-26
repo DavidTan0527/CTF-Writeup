@@ -42,6 +42,7 @@ plugins:
   - jekyll-sitemap
 
 
+permalink: /:collection/:categories/:title
 paginate: 5
 paginate_path: /page:num/
 
@@ -50,10 +51,10 @@ breadcrumbs: true
 collections:
   ctfs:
     output: true
-    permalink: /:collection/:categories/:title
+    # permalink: /:collection/:categories/:title
   blogs:
     output: true
-    permalink: /:collection/:path
+    # permalink: /:collection/:path
 
 category_archive:
   type: jekyll-archives

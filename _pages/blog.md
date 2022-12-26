@@ -1,6 +1,6 @@
 ---
 layout: collection
-permalink: /blog/
+permalink: /blogs/
 collection: blogs
 ---
 
