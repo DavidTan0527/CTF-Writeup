@@ -331,8 +331,8 @@ bool BZ(int AU) {
       // Reach (7, 7) and two other conditions
       return true;
     }
-    vec3 Bf = vec3(Ag - Aj); // Direction from previous point to current point
-    vec3 Bg = vec3(Be - Aj); // Direction from current point to next point
+    vec3 Bf = vec3(Ag - Aj); // Direction from current point to next point
+    vec3 Bg = vec3(Be - Aj); // Direction from current point to previous point
     // Let:
     // Bf = (x1, y1)
     // Bg = (x2, y2)
