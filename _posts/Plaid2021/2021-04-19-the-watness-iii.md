@@ -183,7 +183,7 @@ But from the comments I've put, the x and y values are divided by 8, this is bec
 
 And due to normalization, `Bm.a >= 1` means that the alpha value of that pixel is `>= 255`, which essentially means `== 255` since it cannot exceed 255.
 
-Looking around the JS code, we find the [image](http://watness.pwni.ng/1cb5d7b01a56a90ea70718201a5a67fd.png) that is represented by `introImage`. I downloaded it and wrote some python code to process it:
+Looking around the JS code, we find the [image]({{site.url}}/assets/images/the_watness_iii/introImage.png) that is represented by `introImage`. I downloaded it and wrote some python code to process it:
 
 ```python
 from PIL import Image
