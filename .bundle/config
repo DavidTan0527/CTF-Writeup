@@ -1,3 +1,4 @@
 ---
 BUNDLE_FORCE_RUBY_PLATFORM: "true"
 BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+BUNDLE_BUILD__EVENTMACHINE: "--with-ssl-dir=/opt/homebrew/opt/openssl@3"
