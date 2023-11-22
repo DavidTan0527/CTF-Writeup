@@ -128,7 +128,7 @@ First part
 4. Run `INSERT` and immediately close input channel (this is easy to do with pwntools)
 5. Get leaked key value from our server's (listener) output
 
-In particular, these is the output I had:
+In particular, this is the output I had:
 ```
 Listening on 0.0.0.0 8000
 CONNECT
