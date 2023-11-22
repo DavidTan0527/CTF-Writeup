@@ -10,7 +10,7 @@ Absence of stack initialization and subtle vulnerability to leak secrets read on
 
 (Challenge connects over `nc` in LAN)
 
-[KeyInHaystack.c]({{ site.url }}/files/acs2023/keyinhaystack/KeyInHaystack.c){: .btn .btn--info}
+[KeyInHaystack.c]({{ site.url }}/files/acs2023/keyinhaystack/KeyInHayStack.c){: .btn .btn--info}
 
 # Finding the Vulnerability
 
