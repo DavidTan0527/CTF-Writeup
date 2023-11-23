@@ -57,8 +57,6 @@ User input is obtained inside `key_check`. Upon calling the `ADMIN` command, the
 
 The thing is that almost all the variables are initalized upon first usage (e.g. via `read_until`). Even if not, how do we get the values anyway? The second key observation is here:
 
-a utility function called `read_until(buf, size)` which supposedly reads from `stdin` into `buf` until `size` bytes. This is interesting because of the `-1` erroneous termination (used later).
-
 ```c
 int insert(){
 	unsigned int size_max;
