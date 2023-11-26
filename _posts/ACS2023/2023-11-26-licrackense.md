@@ -7,6 +7,8 @@ Light RE with z3 + heap overflow. From ACS 2023 finals.
 
 # Challenge Description
 
+I forgot my license key... can you crack it and read the secret document for me?
+
 [prob]({{ site.url }}/files/acs2023/licrackense/prob){: .btn .btn--info}
 
 # Solution
