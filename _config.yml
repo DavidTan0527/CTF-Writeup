@@ -42,7 +42,7 @@ plugins:
   - jekyll-sitemap
 
 
-permalink: /:collection/:categories/:title
+permalink: /ctfs/:categories/:title
 paginate: 5
 paginate_path: /page:num/
 
@@ -78,7 +78,7 @@ defaults:
       classes: wide
       author_profile: true
       read_time: true
-      words_per_minute: 120
+      words_per_minute: 150
       show_date: true
       related: false
   # _pages
@@ -97,7 +97,7 @@ defaults:
       classes: wide
       author_profile: true
       read_time: true
-      words_per_minute: 120
+      words_per_minute: 160
       show_date: true
       related: false
 
