@@ -104,7 +104,7 @@ defaults:
 # Site Author
 author:
   name  : "David Tan"
-  avatar: "/assets/images/bio.PNG"
+  avatar: "/assets/images/bio.jpg"
   bio   : "Newbie here =.="
   email : "david_weiucheng@hotmail.com"
   links:
