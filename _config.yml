@@ -22,7 +22,7 @@ title: DavidTan0527
 title_separator: "|"
 email: david_weiucheng@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Challenges will mostly be RE and pwning.
+  Challenges will mostly be binary stuffs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://davidtan0527.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: davidtan0527
@@ -43,7 +43,7 @@ plugins:
 
 
 permalink: /ctfs/:categories/:title
-paginate: 5
+paginate: 6
 paginate_path: /page:num/
 
 breadcrumbs: true
