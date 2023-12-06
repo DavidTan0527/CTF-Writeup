@@ -1,6 +1,6 @@
 ---
 title : "Optinimize [RE]"
-categories: 
+categories: SECCON2023
 ---
 
 Reversing program wrote in nim-lang that uses the `bigints` library for big integer math.
