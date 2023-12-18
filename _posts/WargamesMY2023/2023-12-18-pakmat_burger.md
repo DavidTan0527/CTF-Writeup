@@ -3,7 +3,7 @@ title : "Pak Mat Burger [pwn]"
 categories: WargamesMY2023
 ---
 
-Format string attackt to leak information to perform buffer overflow on binary with stack protection + PIE.
+Format string attack to leak information to perform buffer overflow on binary with stack protection + PIE.
 
 *PS: I didn't solve this during the contest because skill issue :')*
 
