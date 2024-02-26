@@ -32,6 +32,7 @@ timezone: Asia/Singapore
 search: true
 algolia:
   application_id: "3BWNBSUTFI"
+  index_name: blog_site
 
 # Build settings
 # theme: minimal-mistakes-jekyll
