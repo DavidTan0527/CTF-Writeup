@@ -29,6 +29,10 @@ twitter_username: davidtan0527
 github_username:  DavidTan0527
 timezone: Asia/Singapore
 
+search: true
+algolia:
+  application_id: "3BWNBSUTFI"
+
 # Build settings
 # theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.22.0"
@@ -40,7 +44,7 @@ plugins:
   - jekyll-archives
   - jekyll-seo-tag
   - jekyll-sitemap
-
+  - jemoji
 
 permalink: /ctfs/:categories/:title
 paginate: 6
@@ -51,10 +55,10 @@ breadcrumbs: true
 collections:
   ctfs:
     output: true
-    # permalink: /:collection/:categories/:title
+    permalink: /ctfs/:title
   blogs:
     output: true
-    # permalink: /:collection/:path
+    permalink: /blogs/:title
 
 category_archive:
   type: jekyll-archives
